@@ -5,35 +5,35 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import HttpsIcon from "@mui/icons-material/Https";
 import { Link } from "react-router-dom";
+import { Container } from "@mui/material";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 import styles from "./navbar1.module.scss";
+
+const icons = [
+  { component: <TwitterIcon fontSize="1rem" /> },
+  {
+    component: <LinkedInIcon fontSize="1rem" />,
+  },
+  {
+    component: <GoogleIcon fontSize="1rem" />,
+  },
+  {
+    component: <FacebookIcon fontSize="1rem" />,
+  },
+];
 
 const Navbar1 = () => {
   return (
     <div className={styles.navbar}>
-      <div className="container">
+      <Container fixed>
         <div>
           <ul>
-            <li>
-              <a href="#">
-                <TwitterIcon fontSize="1rem" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <LinkedInIcon fontSize="1rem" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <GoogleIcon fontSize="1rem" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <FacebookIcon fontSize="1rem" />
-              </a>
-            </li>
+            {icons?.map((item, idx) => (
+              <li key={idx}>
+                <a href="#">{item.component}</a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -55,12 +55,10 @@ const Navbar1 = () => {
             </li>
           </ul>
           <div>
-            <div>
-              <button>language</button>
-            </div>
+            <LanguageSwitcher />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
