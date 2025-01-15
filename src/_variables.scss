@@ -1,7 +1,14 @@
 $primary: #f1faff;
-$secondary: #fff;
+$secondary: rgba(0, 50, 89, 0.84);
 $white: #fff;
 $black: #000;
 $grey: rgb(51, 51, 51);
+$light-blue: rgb(2, 178, 237);
+$dark-blue: #003259;
 
-$basefont: "Noto Kufi Arabic", serif !important;
+@font-face {
+  font-family: "CustomFont";
+  src: url("/public/fonts/Hacen-Algeria-Bd.ttf") format("truetype");
+}
+
+$basefont: "CustomFont", sans-serif !important;

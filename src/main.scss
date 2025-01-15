@@ -1,13 +1,16 @@
-@use '/src/variables' as *;
-@import url('https://fonts.googleapis.com/css2family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+@use "/src/variables" as *;
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap");
 
+@font-face {
+  font-family: "Hacen-Algeria";
+  src: url("/public/fonts/Hacen-Algeria-Bd.ttf") format("truetype");
+}
 
 *,
 *::after,
-*::before
-{
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $basefont;
+  font-family: "Hacen-Algeria", sans-serif !important;
 }
