@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import QuickTour from "./pages/QuickTour/QuickTour";
+
 import Rtl from "./components/Rtl/Rtl";
 import Navbar1 from "./components/Navbar1/Navbar1";
 import Navbar2 from "./components/Navbar2/Navbar2";
@@ -42,6 +44,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/quickTour" element={<QuickTour />} />
+
           </Routes>
         </BrowserRouter>
       </Rtl>

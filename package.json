@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -23,7 +26,10 @@
     "react-i18next": "^15.4.0",
     "react-router-dom": "^7.1.1",
     "stylis": "^4.3.5",
-    "stylis-plugin-rtl": "^2.1.1"
+    "stylis-plugin-rtl": "^2.1.1",
+    "@types/react": "19.0.7",
+    "@types/react-dom": "19.0.3",
+    "typescript": "5.7.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
