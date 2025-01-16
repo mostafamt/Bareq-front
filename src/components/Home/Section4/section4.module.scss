@@ -1,0 +1,30 @@
+@use "/src/variables" as *;
+
+.section4 {
+  background-color: $primary;
+
+  & > div {
+    text-align: center;
+    & > h2 {
+      padding: 3rem 0;
+      font-size: 1.75rem;
+      color: $dark-blue;
+    }
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

@@ -9,9 +9,9 @@ const Section2 = () => {
       <Container fixed>
         <Grid2 container spacing={2}>
           {data.map((item, idx) => (
-            <Grid2 key={idx} size={3}>
+            <Grid2 key={idx} size={3} className={styles.col}>
               <img src={item.image} alt={item.image} />
-              <Typography>{item.title}</Typography>
+              <Typography variant="h4">{item.title}</Typography>
               <Typography>{item.text}</Typography>
             </Grid2>
           ))}

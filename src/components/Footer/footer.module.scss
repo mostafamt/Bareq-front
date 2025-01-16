@@ -1,0 +1,42 @@
+@use "/src/variables" as *;
+
+.footer {
+  padding: 4rem 0;
+  background-color: $secondary;
+  color: $white;
+
+  & > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    & img {
+      border: 2px solid $white;
+      border-radius: 50%;
+      padding: 1rem;
+    }
+
+    & > p {
+      color: $light-blue;
+      & > span {
+        color: $white;
+      }
+    }
+
+    & > div {
+      margin: 1rem 0;
+    }
+
+    & ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+
+      & a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  }
+}
