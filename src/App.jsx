@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import QuickTour from "./pages/QuickTour/QuickTour";
+
 import Rtl from "./components/Rtl/Rtl";
 import Navbar1 from "./components/Navbar1/Navbar1";
 import Navbar2 from "./components/Navbar2/Navbar2";
@@ -9,6 +11,7 @@ import { I18nextProvider, initReactI18next } from "react-i18next";
 import i18next from "i18next";
 import translationAR from "./locales/ar/translation.json";
 import translationEN from "./locales/en/translation.json";
+import FreeLessons from "./pages/FreeLessons/FreeLessons";
 import Footer from "./components/Footer/Footer";
 
 i18next.init({
@@ -43,6 +46,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/quickTour" element={<QuickTour />} />
+            <Route path="/freeLessons" element={<FreeLessons />} />
+
+
           </Routes>
           <Footer />
         </BrowserRouter>

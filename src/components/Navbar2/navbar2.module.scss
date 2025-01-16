@@ -1,3 +1,16 @@
 .navbar {
     flex-grow: 1;
+
+
+    & img{
+        margin: 10px 20px;
+        outline: 0;
+        cursor: pointer;
+        width: 161px;
+        height: 62.39px;
+        
+    }
+    .button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
+        color:#434343    ;
+    }
 }

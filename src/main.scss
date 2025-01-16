@@ -1,5 +1,6 @@
+@use '/src/variables' as *;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap");
 @use "/src/variables" as *;
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap");
 
 @font-face {
   font-family: "Hacen-Algeria";
@@ -14,3 +15,7 @@
   box-sizing: border-box;
   font-family: "Hacen-Algeria", sans-serif !important;
 }
+.btn-model{
+  width: 250px !important;
+  padding: 10px 5px !important;
+    }
