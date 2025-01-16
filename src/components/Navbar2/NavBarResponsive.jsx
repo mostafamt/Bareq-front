@@ -19,7 +19,7 @@ const pages = [
       path: "/",
     },
     { name: "جولة سريعة", path: "/quickTour" },
-    { name: "دروس مجانية", path: "/" },
+    { name: "دروس مجانية", path: "/freeLessons" },
     { name: "الأخبار", path: "/" },
     { name: "مساعدة", path: "/" },
     { name: "من نحن", path: "/about" },
