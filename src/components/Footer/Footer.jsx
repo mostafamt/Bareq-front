@@ -17,7 +17,7 @@ const data = {
   title: "اختبار تحديد المستوى",
   text: [
     "ابدأ باختبار تحديد المستوى المجاني من ",
-    <span>بارق</span>,
+    "بارق",
     " الذي يحدد مستوى إتقانك للوصول إلى خطة الدرس الأكثر ملاءمة لاحتياجاتك.",
   ],
   button: {
@@ -54,12 +54,6 @@ const Footer = () => {
     <div className={styles.footer}>
       <Container fixed>
         <div>
-          <img src={data.image.src} alt={data.image.alt} />
-          <Typography variant="h4" component="h3">
-            {data.title}
-          </Typography>
-          <Typography>{data.text.map((item) => item)}</Typography>
-          <Button>{data.button.text}</Button>
           <div>
             <ul>
               {data.iconslist.map((icon, idx) => (

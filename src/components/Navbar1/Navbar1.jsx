@@ -38,19 +38,17 @@ const Navbar1 = () => {
         </div>
 
         <div>
-          <ul>
+          <ul className={styles.actions}>
             <li>
               <Link to="#">
-                <PersonAddIcon />
-                <span>مستخدم جديد</span>
-                <span>&nbsp; | &nbsp;</span>
+                <PersonAddIcon fontSize="small" />
+                <span>مستخدم جديد | </span>
               </Link>
             </li>
             <li>
-              <Link to="#">
-                <HttpsIcon />
-                <span>تسجيل دخول</span>
-                <span>&nbsp; | &nbsp;</span>
+              <Link to="/login">
+                <HttpsIcon fontSize="small" />
+                <span>تسجيل دخول | </span>
               </Link>
             </li>
           </ul>

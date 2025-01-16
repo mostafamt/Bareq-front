@@ -6,6 +6,7 @@ import { Container } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import styles from "./navbar2.module.scss";
+import { Link } from "react-router-dom";
 
 const navItems = [
   "الرئيسية",
@@ -27,11 +28,13 @@ const Navbar2 = () => {
         <Container fixed>
           <Toolbar>
             <div style={{ flexGrow: 1 }}>
-              <img
-                src="/assets/logo-arabic.png"
-                alt="logo-arabic"
-                width={200}
-              />
+              <Link to="/">
+                <img
+                  src="/assets/logo-arabic.png"
+                  alt="logo-arabic"
+                  width={200}
+                />
+              </Link>
             </div>
             <Box sx={{ display: "block" }}>
               {navItems.map((item) => (

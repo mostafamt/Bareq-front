@@ -10,6 +10,7 @@ import i18next from "i18next";
 import translationAR from "./locales/ar/translation.json";
 import translationEN from "./locales/en/translation.json";
 import Footer from "./components/Footer/Footer";
+import routes from "./routes";
 
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -41,8 +42,13 @@ function App() {
           <Navbar1 />
           <Navbar2 />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            {routes.map((route) => (
+              <Route
+                key={route.path}
+                path={route.path}
+                Component={route.Component}
+              />
+            ))}
           </Routes>
           <Footer />
         </BrowserRouter>

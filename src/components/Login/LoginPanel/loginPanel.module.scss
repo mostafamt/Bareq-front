@@ -1,0 +1,25 @@
+@use "/src/variables" as *;
+
+.login-panel {
+  background-color: $light-blue;
+  // flex-grow: 1;
+  flex-basis: 30%;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+
+  & > img {
+    width: 12rem;
+    border: 16px solid #29bdf3;
+    border-radius: 50%;
+  }
+
+  & > p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
