@@ -9,6 +9,14 @@
     justify-content: space-between;
     align-items: center;
 
+    & .actions {
+      & > li > a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
     & > div {
       &:first-child {
         & > ul {
