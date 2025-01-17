@@ -1,5 +1,7 @@
+import FreeLessons from "../pages/FreeLessons/FreeLessons";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
+import QuickTour from "../pages/QuickTour/QuickTour";
 
 const routes = [
   {
@@ -9,6 +11,14 @@ const routes = [
   {
     path: "/login",
     Component: Login,
+  },
+  {
+    path: "/quickTour",
+    Component: QuickTour,
+  },
+  {
+    path: "/freeLessons",
+    Component: FreeLessons,
   },
 ];
 
