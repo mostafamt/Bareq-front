@@ -12,6 +12,8 @@ import i18next from "i18next";
 import translationAR from "./locales/ar/translation.json";
 import translationEN from "./locales/en/translation.json";
 import FreeLessons from "./pages/FreeLessons/FreeLessons";
+import News from "./pages/News/News";
+
 
 i18next.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -47,6 +49,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/quickTour" element={<QuickTour />} />
             <Route path="/freeLessons" element={<FreeLessons />} />
+            <Route path="/news" element={<News />} />
+
 
 
           </Routes>

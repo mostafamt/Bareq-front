@@ -20,7 +20,7 @@ const pages = [
     },
     { name: "جولة سريعة", path: "/quickTour" },
     { name: "دروس مجانية", path: "/freeLessons" },
-    { name: "الأخبار", path: "/" },
+    { name: "الأخبار", path: "/news" },
     { name: "مساعدة", path: "/" },
     { name: "من نحن", path: "/about" },
     { name: "اتصل بنا", path: "/" },
