@@ -1,40 +1,51 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Typography, Grid2 } from "@mui/material"; // Assuming you're using MUI
+import axios from "axios";
 
 const ArticleDetails = () => {
   const { id } = useParams(); // Get the article ID from the URL
   const [article, setArticle] = useState(null);
 
+  const [blogsDetailsData, setblogsDetailsData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  console.log(id);
   useEffect(() => {
-    // Here, you would fetch the article details from your API or a local JSON file
-    const fetchedArticle = {
-      id: 1,
-      title: "المتحدة للتعليم تدرب معلمي ماليزيا على تقنية التعليم بالألعاب",
-      date: "17 مارس 2024",
-      description: "بالتعاون مع مدرسة تامبار بارك الدولية نصت المجموعة المتحدة للتعليم بمايزيا ورشة عمل تدريب معلمي اللغة العربية على تقنية التعليم بالألعاب.",
-      content: "في إطار التعاون بين المجموعة المتحدة للتعليم ومدرسة تامبار بارك الدولية في ماليزيا، تم تنظيم ورشة عمل تدريبية لمعلمي اللغة العربية تهدف إلى تحسين مهاراتهم في استخدام تقنية التعليم بالألعاب...",
-      author: "المجموعة المتحدة للتعليم",
-      image: {
-        url: "https://www.almotahidaeducation.com/wp-content/uploads/2024/03/Almotahida-Malaysia-Gamification-Training-for-Arabic-Teachers-2-1-819x1024.jpg",
-        alt: "Training image"
+    const fetchBlogsData = async (id) => {
+      try {
+        setLoading(true);
+        const result = await axios({
+          method: "GET",
+          url: `https://www.almotahidaeducation.com/index.php?rest_route=/wp/v2/posts/${id}`,
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        });
+
+        setblogsDetailsData(result); // Assuming result.data is an array of posts
+        console.log(result.data);
+        setLoading(false);
+      } catch (err) {
+        setLoading(false);
+        console.error("Error fetching data", err);
       }
     };
-    setArticle(fetchedArticle);
-  }, [id]);
 
-  if (!article) return <div>Loading...</div>;
+    if(id){
+      fetchBlogsData(id)
+    };
+  }, []);
 
   return (
     <Container>
       <Grid2 container spacing={2}>
         <Grid2 size={12}>
-          <Typography variant="h4">{article.title}</Typography>
-          <Typography variant="body1">{article.date}</Typography>
+          <Typography variant="h4">article.title</Typography>
+          <Typography variant="body1">article.date</Typography>
           <Typography variant="body1" sx={{ marginTop: 2 }}>
-            {article.content}
+            article.conten
           </Typography>
-          <img src={article.image.url} alt={article.image.alt} style={{ width: "100%", marginTop: 20 }} />
         </Grid2>
       </Grid2>
     </Container>

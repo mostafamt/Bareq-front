@@ -99,7 +99,7 @@ const ArticleSection = () => {
                     {Parse(decodeHtmlEntities(item.excerpt.rendered))}
                   </Typography>
                   <Grid2 className={style.btnContent}>
-                    <Link to={`/blog/${item.id}`}>
+                    <Link to={`/articlesDetails/${item.id}`}>
                       <Typography variant="h6" component="p" sx={{ color: "#00aeed", fontSize: "13px", fontWeight: "700" }}>
                         {data.button}
                       </Typography>
