@@ -1,3 +1,5 @@
+@use "/src/variables" as *;
+
 .button {
   background-color: #00aeed;
   border: 0;
@@ -10,4 +12,18 @@
     color: #fff;
     transition: all 0.2s;
   }
+}
+
+.login {
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid $grey1;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.active {
+  background-color: $light-blue;
+  color: $white;
 }
